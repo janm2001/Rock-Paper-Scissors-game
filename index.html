@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors game</title>
+	<style>
+
+		body{
+			background:silver;
+		}
+		.text-center{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="text-center">
+		Rock Paper Scissors game
+	</h1>
+
+	<p>Rock beats Scissors</p>
+	<p>Paper beats Rock</p>
+	<p>Scissors beats Paper</p>
+	<p><strong>Fill the prompt to and see in the console who wins</strong></p>
+	
+
+
+	<script>
+		//we prompt the user to give us what he picks to use
+		let playerChoice = prompt("what do you pick Rock, Paper or Scissors");
+		//we make a random number from 0 to 2
+		let randomNumber = Math.floor(Math.random() *3);
+		// we make a variable that will store user choice depending on random number
+		let userChoice;
+		// we put cases if the number is 0 it will be rock and so on...
+		if(randomNumber === 0){
+			userChoice = "rock"
+		}else if(randomNumber === 1){
+			userChoice = "paper";
+		} else {
+			userChoice = "scissors";
+		}
+
+		console.log("User choice for this game is " + userChoice);
+
+		// checking if the both players have the same choice
+		if(playerChoice === userChoice){
+			console.log("It a draw ");
+			console.log("restart if you want to play again!");
+		}
+		// make if else if else statments to check who wins
+		//rock cases
+		else if(playerChoice === "rock" && userChoice === "scissors"){
+			console.log("You win");
+			console.log("restart if you want to play again!");
+		} else if(playerChoice === "rock" && userChoice === "paper") {
+			console.log("User win");
+			console.log("restart if you want to play again!");
+			// paper cases
+		} else if(playerChoice === "paper" && userChoice === "rock"){
+			console.log("You win");
+			console.log("restart if you want to play again!");
+		}  else if(playerChoice === "paper" && userChoice === "scissors"){
+			console.log("User win");
+			console.log("restart if you want to play again!");
+			// scissors cases
+		}  else if(playerChoice === "scissors" && userChoice === "rock"){
+			console.log("You win");
+			console.log("restart if you want to play again!");
+		} else {
+			console.log("User win");
+			console.log("restart if you want to play again!");
+		}
+
+	</script>
+</body>
+</html>
